@@ -149,6 +149,8 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.6.3-x86_64-linux)
+    tailwindcss-rails (2.0.29-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.2)
     timeout (0.3.2)
     tzinfo (2.0.6)
@@ -167,6 +169,7 @@ DEPENDENCIES
   rails (~> 7.0.5)
   sprockets-rails
   sqlite3 (~> 1.4)
+  tailwindcss-rails (~> 2.0, >= 2.0.29)
   tzinfo-data
 
 RUBY VERSION

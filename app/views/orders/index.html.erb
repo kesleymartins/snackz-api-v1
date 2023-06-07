@@ -1,0 +1,15 @@
+<% if @orders.count > 0 %>
+  <table>
+    <tbody>
+      <% @orders.each do |order| %>
+        <tr>
+          <td><%= order.food %></td>
+          <td><%= order.accompaniment %></td>
+          <td><%= order.description %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <span>Not Found</span>
+<% end %>

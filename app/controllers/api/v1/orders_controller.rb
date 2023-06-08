@@ -11,6 +11,15 @@ module Api
         end
       end
 
+      def results
+        @response = {
+          food: Order.today.results_for(:food),
+          accompaniment: Order.today.results_for(:accompaniment)
+        }
+
+        render json: @response, status: :ok
+      end
+
       private
 
       def order_params

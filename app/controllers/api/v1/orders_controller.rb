@@ -14,7 +14,7 @@ module Api
       private
 
       def order_params
-        params.require(:order).permit(:food, :accompaniment, :description)
+        params.require(:order).permit(:food, :accompaniment, :description, :name)
       end
     end
   end

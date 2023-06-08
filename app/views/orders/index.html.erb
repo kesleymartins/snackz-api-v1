@@ -1,8 +1,15 @@
 <% if @orders.count > 0 %>
-  <table>
+  <table class="w-full whitespace-nowrap border rounded-lg shadow text-center">
+    <thead class="bg-gray-100">
+      <tr>
+        <th>Pao</th>
+        <th>Acompanhamento</th>
+        <th>Descricao</th>
+      </tr>
+    </thead>
     <tbody>
       <% @orders.each do |order| %>
-        <tr>
+        <tr class="hover:bg-gray-50 h-10 border">
           <td><%= order.food %></td>
           <td><%= order.accompaniment %></td>
           <td><%= order.description %></td>
@@ -11,5 +18,7 @@
     </tbody>
   </table>
 <% else %>
-  <span>Not Found</span>
+  <div class="text-center text-lg border shadow rounded bg-indigo-100 py-2 w-full">
+    <span>Hoje ainda não foi realizado nenhum pedido 😊</span>
+  </div>
 <% end %>

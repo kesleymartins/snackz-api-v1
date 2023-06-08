@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :orders, only: %i[ destroy ]
+
   root to: 'orders#index'
 end

@@ -6,6 +6,7 @@
         <th>Acompanhamento</th>
         <th>Descricao</th>
         <th>Nome</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@
           <td><%= order.accompaniment %></td>
           <td><%= order.description %></td>
           <td><%= order.name %></td>
+          <td><%= button_to 'Remover', order_path(order), method: :delete %></td>
         </tr>
       <% end %>
     </tbody>

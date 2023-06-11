@@ -20,6 +20,12 @@ module Api
         render json: @response, status: :ok
       end
 
+      def descriptions
+        @response = Order.descriptions
+
+        render json: @response, status: :ok
+      end
+
       private
 
       def order_params

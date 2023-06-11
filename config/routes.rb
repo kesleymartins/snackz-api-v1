@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       
       scope :orders do
         get "/results", to: "orders#results"
+        get "/descriptions", to: "orders#descriptions"
       end
     end
   end

@@ -2,21 +2,25 @@
   <table class="w-full whitespace-nowrap border rounded-lg shadow text-center">
     <thead class="bg-gray-100">
       <tr>
-        <th>Pao</th>
-        <th>Acompanhamento</th>
-        <th>Descricao</th>
         <th>Nome</th>
+        <th>Pão</th>
+        <th>Acompanhamento</th>
+        <th>Descrição</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
       <% @orders.each do |order| %>
         <tr class="hover:bg-gray-50 h-10 border">
+          <td><%= order.name %></td>
           <td><%= order.food %></td>
           <td><%= order.accompaniment %></td>
           <td><%= order.description %></td>
-          <td><%= order.name %></td>
-          <td><%= button_to 'Remover', order_path(order), method: :delete %></td>
+          <td>
+            <%= button_to 'Remover', order_path(order), method: :delete, 
+              class: 'border rounded-lg shadow text-white bg-red-400 hover:bg-red-300 hover:text-black px-2 py-1' 
+            %>
+          </td>
         </tr>
       <% end %>
     </tbody>

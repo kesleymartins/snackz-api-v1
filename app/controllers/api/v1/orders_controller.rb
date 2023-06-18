@@ -21,7 +21,7 @@ module Api
       end
 
       def descriptions
-        @response = Order.descriptions
+        @response = Order.today.descriptions
 
         render json: @response, status: :ok
       end
